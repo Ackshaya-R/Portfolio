@@ -239,6 +239,8 @@
     }
     .project-card:nth-child(1) .project-icon { background: linear-gradient(135deg,#FCE4EC,#F8BBD9); }
     .project-card:nth-child(2) .project-icon { background: linear-gradient(135deg,#EDE7F6,#D4C4F0); }
+    .project-card:nth-child(3)::before {  background: linear-gradient(90deg, var(--marigold), var(--rose)); 
+}
     .project-card h3 {
       font-family: 'Playfair Display', serif;
       font-size: 1.22rem; margin-bottom: 12px; color: var(--text-dark);
@@ -282,7 +284,12 @@
     .badge-gl       { background: linear-gradient(135deg,#EDE7F6,#D4C4F0); }
     .badge-infosys  { background: linear-gradient(135deg,#E8F5E9,#B8DECC); }
     .badge-anthropic{ background: linear-gradient(135deg,#FFF8E1,#FAD7A0); }
-
+    .badge-book { 
+  background: linear-gradient(135deg,#FFF3E0,#FAD7A0); 
+}
+.badge-ieee {
+  background: linear-gradient(135deg,#E3F2FD,#BBDEFB);
+}
     /* ── HACKATHONS ── */
     #hackathons { background: rgba(255,255,255,.4); }
     .hack-list { display: flex; flex-direction: column; gap: 22px; max-width: 780px; margin: 0 auto; }
@@ -415,6 +422,7 @@
     <ul class="nav-links">
       <li><a href="#about">About</a></li>
       <li><a href="#skills">Skills</a></li>
+      <li><a href="#research">Research</a></li>
       <li><a href="#projects">Projects</a></li>
       <li><a href="#certifications">Certifications</a></li>
       <li><a href="#hackathons">Hackathons</a></li>
@@ -496,11 +504,69 @@
           <div class="skill-tags">
             <span class="tag">Canva</span>
             <span class="tag">WordPress</span>
+            <span class="tag">AI Tools</span>
           </div>
         </div>
       </div>
     </div>
   </section>
+
+  <!-- Research & Publications -->
+<section id="research">
+  <div class="section-inner" style="text-align:center;">
+    <div class="section-label">Research & Publications</div>
+    <h2>My <em>academic</em> contributions</h2>
+
+    <div class="projects-grid">
+
+      <!-- IEEE Publication -->
+      <div class="project-card" style="text-align:left;">
+        <div class="project-icon">📄</div>
+        <h3>Voice-Based Health Assistant for Elderly with Multi-Language and Offline Support</h3>
+        <p>
+          Published in IEEE Xplore and presented at the 10th IEEE International Conference on Smart Structures and Systems (ICSSS 2025).
+          This work focuses on a multilingual, offline-capable voice assistant designed to improve healthcare accessibility for elderly users.
+        </p>
+        <div class="tech-chips">
+          <span class="tech-chip">IEEE Xplore</span>
+          <span class="tech-chip">Research</span>
+          <span class="tech-chip">Healthcare AI</span>
+        </div>
+      </div>
+
+      <!-- Patent -->
+      <div class="project-card" style="text-align:left;">
+        <div class="project-icon">📜</div>
+        <h3>Patent: Voice-Based Health Assistant</h3>
+        <p>
+          Indian Patent Application (No: 202541104111 A), published in The Patent Office Journal on 28/11/2025.
+          The system enables offline NLP, voice interaction, emergency alerts, and real-time health monitoring for elderly users.
+        </p>
+        <div class="tech-chips">
+          <span class="tech-chip">Patent</span>
+          <span class="tech-chip">Innovation</span>
+          <span class="tech-chip">Assistive Tech</span>
+        </div>
+      </div>
+
+      <div class="project-card" style="text-align:left;">
+  <div class="project-icon">📖</div>
+  <h3>Book Contribution – “Nature” Anthology</h3>
+  <p>
+    Contributed as an author in the anthology <strong>“Nature”</strong>, published by Let’s Write Publication
+    in collaboration with K.S. Rangasamy College of Technology. This work reflects creative expression
+    and literary contribution as part of a collaborative publication.
+  </p>
+  <div class="tech-chips">
+    <span class="tech-chip">Publication</span>
+    <span class="tech-chip">Writing</span>
+    <span class="tech-chip">Creative Work</span>
+  </div>
+</div>
+
+    </div>
+  </div>
+</section>
 
   <!-- Projects -->
   <section id="projects">
@@ -510,7 +576,7 @@
       <div class="projects-grid">
         <div class="project-card" style="text-align:left;">
           <div class="project-icon">🩺</div>
-          <h3>Non-Invasive Chronic Disease Monitoring</h3>
+          <h3>Non-Invasive Chronic Disease Monitoring System</h3>
           <p>A health monitoring system that detects glucose, hemoglobin, and cholesterol levels using saliva and sweat analysis — eliminating the need for painful blood tests.</p>
           <div class="tech-chips">
             <span class="tech-chip">Java</span>
@@ -529,6 +595,23 @@
             <span class="tech-chip">JDBC</span>
           </div>
         </div>
+        <div class="project-card" style="text-align:left;">
+  <div class="project-icon">🧠</div>
+  <h3>Voice-Based Health Assistant for Elderly with Multi-Language and Offline Support
+  </h3>
+  <p>
+    A multilingual and offline-capable healthcare assistant designed for elderly users.
+    It provides voice-based interaction, medication reminders, emergency alerts, and
+    real-time health monitoring through wearable integration. Built to function without
+    constant internet access, ensuring accessibility and independence.
+  </p>
+  <div class="tech-chips">
+    <span class="tech-chip">Java</span>
+    <span class="tech-chip">Android Studio</span>
+    <span class="tech-chip">Offline NLP</span>
+    <span class="tech-chip">Healthcare AI</span>
+  </div>
+</div>
       </div>
     </div>
   </section>
@@ -574,6 +657,16 @@
           <div class="cert-org">Anthropic</div>
           <div class="cert-name">Claude 101 Certification</div>
         </div>
+        <div class="cert-card">
+  <div class="cert-badge badge-book">📖</div>
+  <div class="cert-org">LET'S WRITE PUBLICATION</div>
+  <div class="cert-name">Published Contributor – “Nature” Anthology</div>
+</div>
+        <div class="cert-card">
+  <div class="cert-badge badge-ieee">📄</div>
+  <div class="cert-org">IEEE XPLORE</div>
+  <div class="cert-name">International Conference Publication – ICSSS 2025</div>
+</div>
       </div>
     </div>
   </section>
